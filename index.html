@@ -97,6 +97,11 @@
                 </section>
 
                 <section>
+                    <h2>EXPLAIN explained</h2>
+                    <p><!-- TODO: go into EXPLAIN --></p>
+                </section>
+
+                <section>
                     <h2>Pitfall: low cardinality index</h2>
                     <p>Indexes on column(s) with high <em>cardinality</em> are better at filtering during tree traversal.</p>
                     <p>High cardinality: e.g. unique IDs, strings with little chance of duplication</p>
@@ -109,9 +114,16 @@
                 </section>
 
                 <section>
+                    <h2>Pitfall: composite index column ordering</h2>
+                    <p>Indexes: Used by queries that filter by columns at the 'beginning'</p>
+                    <p>This is akin to a telephone directory: Can lookup by last name, but lookup by first name requires a different structure</p>
+                </section>
+
+                <section>
                     <h2>Resources</h2>
                     <ul>
                         <li><a href="http://use-the-index-luke.com">use-the-index-luke.com</a></li>
+                        <li><a href="http://www.postgresql.org/docs/9.3/static/using-explain.html">PostgreSQL: Using EXPLAIN</a></li>
                     </ul>
                 </section>
 
@@ -137,7 +149,7 @@
 				center: true,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Parallax scrolling
 				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
